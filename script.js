@@ -15,4 +15,17 @@ const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.header nav');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});
 navLinks.forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
-document.querySelector('#year').textContent=new Date().getFullYear();
+
+const themeToggle=document.querySelector('[data-theme-toggle]');
+const darkOpt=themeToggle.querySelector('.theme-toggle-opt--dark');
+const lightOpt=themeToggle.querySelector('.theme-toggle-opt--light');
+function applyTheme(theme){
+  document.documentElement.setAttribute('data-theme',theme);
+  darkOpt.classList.toggle('is-active',theme==='dark');
+  lightOpt.classList.toggle('is-active',theme==='light');
+}
+applyTheme('dark');
+themeToggle.addEventListener('click',()=>{
+  const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  applyTheme(next);
+});
