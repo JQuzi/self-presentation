@@ -1,6 +1,6 @@
 # Self Presentation
 
-Одностраничное резюме-портфолио Алексея Меркурьева для публикации на GitHub Pages.
+Одностраничное резюме-портфолио для публикации на GitHub Pages.
 
 Опубликованная версия:
 https://jquzi.github.io/self-presentation/
