@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Алексей Меркурьев — AI Automation Engineer, Data Engineer и Python-разработчик. Опыт с SQL, ETL, LLM API и автоматизацией.">
+  <meta name="description" content="Алексей Меркурьев — AI Automation Engineer, Data Engineer и Python-разработчик. Проекты на Python, SQL, PySpark, Airflow, ClickHouse и LLM API.">
   <title>Алексей Меркурьев — портфолио</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jquzi.github.io/self-presentation/">
   <meta property="og:title" content="Алексей Меркурьев — AI Automation Engineer, Data Engineer, Python-разработчик">
-  <meta property="og:description" content="Опыт с SQL, ETL, LLM API и автоматизацией. Портфолио и резюме.">
+  <meta property="og:description" content="Data Engineering, AI-интеграции и автоматизация: Python, SQL, PySpark, Airflow, ClickHouse и LLM API.">
   <meta property="og:image" content="https://jquzi.github.io/self-presentation/assets/alexey-merkurev.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Алексей Меркурьев — портфолио">
@@ -101,7 +101,45 @@
         </div>
 
         <ol class="timeline-list">
-          <li class="timeline-item" id="2026-site-redesign" data-kind="project" data-year="2026">
+          <li class="timeline-item" id="2026-houses-data-pipeline" data-kind="project" data-year="2026">
+            <span class="timeline-dot"></span>
+            <div class="timeline-entry-row">
+              <span class="timeline-entry-date">2026</span>
+              <div class="timeline-entry-card">
+                <button class="timeline-entry-close-button" type="button" aria-label="Закрыть: Пайплайн аналитики жилых домов РФ" data-entry-close>
+                  <svg aria-hidden="true" class="timeline-entry-close-icon" fill="none" stroke="currentColor" viewBox="0 0 16 16"><path d="M4.25 4.25 11.75 11.75"/><path d="M11.75 4.25 4.25 11.75"/></svg>
+                </button>
+                <div class="timeline-entry-summary">
+                  <button class="timeline-entry-trigger" type="button" aria-expanded="false" aria-controls="2026-houses-data-pipeline-details" data-entry-trigger><span class="sr-only">Открыть историю: Пайплайн аналитики жилых домов РФ</span></button>
+                  <h3 class="timeline-entry-title">Пайплайн аналитики жилых домов РФ</h3>
+                  <span class="timeline-entry-text">Построил воспроизводимый ETL-пайплайн для 590&nbsp;707 объектов: Airflow загружает данные, PySpark проверяет и преобразует их, а ClickHouse хранит результат.</span>
+                  <span class="timeline-entry-tags">
+                    <ul class="tag-list" aria-label="Технологии и темы"><li>Python</li><li>PySpark</li><li>Airflow</li><li>ClickHouse</li><li>Docker</li></ul>
+                  </span>
+                </div>
+                <div class="timeline-entry-details-shell" id="2026-houses-data-pipeline-details" aria-hidden="true">
+                  <div class="timeline-entry-details-inner">
+                    <div class="timeline-entry-details">
+                      <div class="timeline-entry-heading-group"><h4 class="timeline-entry-subheading">01 · Источник</h4></div>
+                      <p>Airflow DAG скачивает публичный набор данных о жилых домах через API Яндекс Диска, проверяет контрольную сумму MD5 и распаковывает CSV в Docker volume.</p>
+                      <div class="timeline-entry-heading-group"><h4 class="timeline-entry-subheading">02 · Обработка</h4></div>
+                      <p>PySpark преобразует файл из UTF-16LE в UTF-8, проверяет схему и качество данных, приводит поля к нужным типам и рассчитывает аналитические показатели.</p>
+                      <div class="timeline-entry-heading-group"><h4 class="timeline-entry-subheading">03 · Загрузка</h4></div>
+                      <p>Результат загружается в ClickHouse без дубликатов при повторном запуске. Весь стек — Airflow, PostgreSQL и ClickHouse — поднимается через Docker Compose.</p>
+                      <div class="timeline-entry-heading-group"><h4 class="timeline-entry-subheading">04 · Результат</h4></div>
+                      <p>Обработано 590&nbsp;707 объектов, подготовлены аналитические выборки и три графика: лидирующие регионы и города, экстремумы площади и распределение домов по десятилетиям.</p>
+                      <div class="timeline-entry-links">
+                        <a class="text-external-link" href="https://github.com/JQuzi/de-final-assignment-8" target="_blank" rel="noreferrer"><span>Код и инструкция по запуску</span><svg aria-hidden="true" class="text-external-link-icon" fill="none" stroke="currentColor" viewBox="0 0 16 16"><path d="M6 4.5H4.75A2.25 2.25 0 0 0 2.5 6.75v4.5a2.25 2.25 0 0 0 2.25 2.25h4.5a2.25 2.25 0 0 0 2.25-2.25V10"/><path d="M9 2.5h4.5V7"/><path d="m8 8 5.25-5.25"/></svg></a>
+                        <a class="text-external-link" href="https://github.com/JQuzi/de-final-assignment-8/tree/main/results" target="_blank" rel="noreferrer"><span>Результаты и графики</span><svg aria-hidden="true" class="text-external-link-icon" fill="none" stroke="currentColor" viewBox="0 0 16 16"><path d="M6 4.5H4.75A2.25 2.25 0 0 0 2.5 6.75v4.5a2.25 2.25 0 0 0 2.25 2.25h4.5a2.25 2.25 0 0 0 2.25-2.25V10"/><path d="M9 2.5h4.5V7"/><path d="m8 8 5.25-5.25"/></svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item-repeat" id="2026-site-redesign" data-kind="project" data-year="2026">
             <span class="timeline-dot"></span>
             <div class="timeline-entry-row">
               <span class="timeline-entry-date">2026</span>
@@ -213,22 +251,6 @@
             </div>
           </li>
 
-          <li class="timeline-item timeline-item-repeat" id="2025-etl-pipeline" data-kind="project" data-year="2025">
-            <span class="timeline-dot"></span>
-            <div class="timeline-entry-row">
-              <span class="timeline-entry-date">2025</span>
-              <div class="timeline-entry-card">
-                <div class="timeline-entry-summary">
-                  <h3 class="timeline-entry-title">ETL Pipeline</h3>
-                  <span class="timeline-entry-text">Загрузка данных из API, обработка, сохранение в PostgreSQL и оркестрация через Apache Airflow.</span>
-                  <span class="timeline-entry-tags">
-                    <ul class="tag-list" aria-label="Технологии и темы"><li>Python</li><li>Airflow</li><li>PostgreSQL</li></ul>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </li>
-
           <li class="timeline-item timeline-item-repeat" id="2025-task-autoassign" data-kind="project" data-year="2025">
             <span class="timeline-dot"></span>
             <div class="timeline-entry-row">
@@ -245,7 +267,7 @@
             </div>
           </li>
 
-          <li class="timeline-item timeline-item-repeat" id="2025-data-engineering-practice" data-kind="work" data-year="2025">
+          <li class="timeline-item timeline-item-repeat" id="2025-data-engineering-practice" data-kind="education" data-year="2025">
             <span class="timeline-dot"></span>
             <div class="timeline-entry-row">
               <span class="timeline-entry-date">2025</span>

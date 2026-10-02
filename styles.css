@@ -857,6 +857,10 @@ button {
 }
 
 @media (max-width: 47.999rem) {
+  .timeline-item:has(.timeline-entry-card-expanded) .timeline-entry-date {
+    visibility: hidden;
+  }
+
   .timeline-entry-card-expanded {
     z-index: 3;
     width: calc(100% + var(--timeline-date-width) + 0.45rem);
