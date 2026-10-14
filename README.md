@@ -17,3 +17,7 @@ python -m http.server 8000
 Затем открыть http://localhost:8000.
 
 Сайт сделан на HTML, CSS и JavaScript и размещается через GitHub Pages.
+
+## Что есть на сайте
+
+Проекты по Data Engineering и автоматизации, опыт работы, образование и ссылки на мои резюме.
